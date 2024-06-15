@@ -1,4 +1,5 @@
 using System;
+//  I added an Activity counter to the menu options that counts how many activities that user performs. It also takes into consideration that checking your activity count does not count as an activity.
 
 List<string> actions = new List<string> { "Start Breathing Activity", "Start Reflecting Activity", "Start Listing Activity", "Activity Count", "Quit" };
 string action = "";
@@ -35,12 +36,19 @@ while (action != "5")
     }
     else if (action == "4")
     {
-        Console.Clear();
-        Console.WriteLine();
-        Console.WriteLine($"You have completed {activityCount} activities!");
-        activityCount -= 1; 
+        if (activityCount == 1)
+        {
+           Console.Clear();
+           Console.WriteLine();
+           Console.WriteLine($"You have completed {activityCount} activity!"); 
+        }
+        else 
+        {
+            Console.Clear();
+            Console.WriteLine();
+            Console.WriteLine($"You have completed {activityCount} activities!");
+        }
+        activityCount += 1;
     }
-
-activityCount += 1;
 
 }
