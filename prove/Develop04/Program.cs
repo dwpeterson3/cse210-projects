@@ -1,9 +1,10 @@
 using System;
 
-List<string> actions = new List<string> { "Start Breathing Activity", "Start Reflecting Activity", "Start Listing Activity", "Quit" };
+List<string> actions = new List<string> { "Start Breathing Activity", "Start Reflecting Activity", "Start Listing Activity", "Activity Count", "Quit" };
 string action = "";
+int activityCount = 0;
 
-while (action != "4")
+while (action != "5")
 {
 
     Console.WriteLine();
@@ -29,6 +30,17 @@ while (action != "4")
     }
     else if (action == "3")
     {
-
+        ListingActivity listingActivity = new ListingActivity("Listing Activity","will help you reflect on the good things in your life by having you list as many things as you can in a certain area.");
+        listingActivity.List(); 
     }
+    else if (action == "4")
+    {
+        Console.Clear();
+        Console.WriteLine();
+        Console.WriteLine($"You have completed {activityCount} activities!");
+        activityCount -= 1; 
+    }
+
+activityCount += 1;
+
 }

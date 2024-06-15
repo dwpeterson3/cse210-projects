@@ -4,12 +4,10 @@ using System.Security.Cryptography.X509Certificates;
 
 class ReflectingActivity : Activity
 {
-    // private List<string> _reflectingPrompts;
-    // private List<string> _questions; 
+
     public ReflectingActivity(string name, string description) : base(name, description)
     {
-        // _reflectingPrompts = new List<string>(); 
-        // _questions = new List<string>(); 
+ 
     }
     
     public string ReflectingPromptGenerator()
@@ -46,15 +44,15 @@ class ReflectingActivity : Activity
         int index = rnd.Next(_questionPrompts.Length);
         return _questionPrompts[index]; 
     }
-    public void ReflectionCountdown()
-    {
-        for (int i = 5; i > 0; i--)
-        {
-            Console.Write(i);
-            Thread.Sleep(1000);
-            Console.Write("\b \b"); 
-        }
-    }
+    // public void ReflectionCountdown()
+    // {
+    //     for (int i = 5; i > 0; i--)
+    //     {
+    //         Console.Write(i);
+    //         Thread.Sleep(1000);
+    //         Console.Write("\b \b"); 
+    //     }
+    // }
 
     public void Reflect()
     {
@@ -70,15 +68,16 @@ class ReflectingActivity : Activity
         Console.WriteLine(); 
         Console.WriteLine("Now ponder on each of the following questions as they related to this experience.");
         Console.Write($"You may begin in: ");
-        ReflectionCountdown(); 
+        CountDownTimer();
+        Console.Clear(); 
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(_duration); 
         while (DateTime.Now < endTime)
         {
-            Console.Write($">{ReflectingQuestionGenerator()}");
-            Spinner();
-            Thread.Sleep(10000);
+            
             Console.WriteLine();
+            Console.Write($">{ReflectingQuestionGenerator()}");
+            SlowSpinner();
 
         }
         WellDone();

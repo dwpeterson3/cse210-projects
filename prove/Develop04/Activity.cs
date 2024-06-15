@@ -48,7 +48,32 @@ public class Activity
         animationStrings.Add("/"); 
         animationStrings.Add("-"); 
         animationStrings.Add("\\");
+
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(3);
         
+        while (DateTime.Now < endTime)
+        {
+            foreach (string s in animationStrings)
+            {
+                Console.Write(s);
+                Thread.Sleep(500);
+                Console.Write("\b \b");
+            }   
+        }
+    }
+    public void SlowSpinner()
+    {
+         List<string> animationStrings = new List<string>();
+        animationStrings.Add("|");
+        animationStrings.Add("/"); 
+        animationStrings.Add("-"); 
+        animationStrings.Add("\\"); 
+        animationStrings.Add("|"); 
+        animationStrings.Add("/"); 
+        animationStrings.Add("-"); 
+        animationStrings.Add("\\");
+
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(10);
         
@@ -60,6 +85,15 @@ public class Activity
                 Thread.Sleep(500);
                 Console.Write("\b \b");
             }   
+        }
+    }
+    public void CountDownTimer()
+    {
+        for (int i = 5; i > 0; i--)
+        {
+            Console.Write(i);
+            Thread.Sleep(1000);
+            Console.Write("\b \b"); 
         }
     }
 

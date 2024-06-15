@@ -35,6 +35,7 @@ class BreathingActivity : Activity
             Console.Write("\b \b");
 
         }
+        Console.WriteLine();
     }
 
     public void Breathe()
