@@ -48,7 +48,7 @@ while (action != "5")
             Console.WriteLine();
             Console.WriteLine($"You have completed {activityCount} activities!");
         }
-        activityCount += 1;
+    activityCount += 1;
     }
 
 }
