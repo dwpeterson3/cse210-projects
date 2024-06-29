@@ -1,0 +1,4 @@
+Simple Goal:Simple Goal 2 :This is my 2nd Simple Goal:25:True
+Simple Goal:Simple Goal:This is a Simple Goal:25:True
+Eternal Goal:Eternal Goal:This is an Eternal Goal:25
+Checklist Goal:  Checklist Goal:This is a Checklist Goal:25:4:4:100
