@@ -20,7 +20,8 @@ class Program
         video3.SaveComment(new Comment("abelhawk", "I honestly can't help but laugh at these negative reviews about this movie. If you don't like the acting, effects, etc., fine, but giving the movie 1 star because you don't like the way the miracles in the movie were shown is stupid. The accounts of angels and miracles are documented by real people who went through this terrible situation. Whether they're true or not is besides the point."));
         video3.SaveComment(new Comment("welhof1", "Like others I had never heard of this incident and after reading about it, the movie does follow the events pretty close."));
         video3.SaveComment(new Comment("superscrounger", "This is a film about faith. I imagine many people who watch it may be aware of that beforehand. But if you weren't, and it projects ideals you disagree with, it is best to acknowledge that in a civil, thoughtful, non-attacking way."));
-
+        video3.SaveComment(new Comment("k_gazo", "Once the movie got going, we both realized the script was terrible. The acting really wasn't as bad as I originally thought. There is only so much an actor can do with bad lines and a choppy narrative. I would have enjoyed learning more about the protagonist's background and motivation. We quickly saw that the movie was faith-based, but the lines questioning God seemed forced into the script and out of place. I really can't fault the actors, and as the movie progressed we did see more emotion evoked.")); 
+        
         videos.Add(video1);
         videos.Add(video2);
         videos.Add(video3);
