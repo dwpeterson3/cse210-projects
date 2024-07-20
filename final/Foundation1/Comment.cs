@@ -6,4 +6,9 @@ public class Comment{
         _commenterName = commenterName;
         _commentText = commentText; 
     }
+
+    public string CommentString()
+    {
+        return $"Commenter: {_commenterName}, Comment: {_commentText}"; 
+    }
 }
